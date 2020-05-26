@@ -9,8 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './guard/auth.guard'
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,11 @@ import { AuthGuard } from './guard/auth.guard'
     AuthGuard,
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: HTTP_INTERCEPTORS, 
+      useClass: TokenInterceptorService,
+       multi: true},
+    { provide: RouteReuseStrategy,
+       useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
