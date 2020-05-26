@@ -11,6 +11,29 @@
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
 
+  --ion-color-mango: #ffcc66;
+--ion-color-mango-rgb: 255,204,102;
+--ion-color-mango-contrast: #000000;
+--ion-color-mango-contrast-rgb: 0,0,0;
+--ion-color-mango-shade: #e0b45a;
+--ion-color-mango-tint: #ffd175;
+
+ion-tab-button.tab-selected {
+ion-icon, ion-label {
+color: var(--ion-color-mango) !important;
+--ion-color-base: var(--ion-color-mango) !important;
+}
+}
+}
+
+.ion-color-mango {
+--ion-color-base: var(--ion-color-mango);
+--ion-color-base-rgb: var(--ion-color-mango-rgb);
+--ion-color-contrast: var(--ion-color-mango-contrast);
+--ion-color-contrast-rgb: var(--ion-color-mango-contrast-rgb);
+--ion-color-shade: var(--ion-color-mango-shade);
+--ion-color-tint: var(--ion-color-mango-tint);
+
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
   --ion-color-secondary-rgb: 61, 194, 255;

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="mango">
+  <ion-title>Login</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding='true'>
+  <img src="" class="smallLogo"/>
+  <h1>Sign In</h1>
+  <form (submit)="signIn()">
+  <ion-list>
+  <ion-item>
+  <ion-label position="stacked">Email</ion-label>
+  <ion-input autocomplete="off" [(ngModel)]="user.email" name="email" type="text"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+  <ion-label position="stacked">Password</ion-label>
+  <ion-input autocomplete="off" [(ngModel)]="user.password" name="password" type="password"></ion-input>
+  </ion-item>
+  
+  <ion-item lines='none'>
+  <a routerLink='/signup'>Crear Cuenta</a>
+  </ion-item>
+  </ion-list>
+  <ion-button expand="block" type="submit" share="round" color="success">Login</ion-button>
+  </form>
+  </ion-content>

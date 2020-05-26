@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="mango">
+  <ion-title>Registration</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding='true'>
+  <img src="" class="smallLogo"/>
+  <h1>Crear Cuenta</h1>
+  <form (submit)="signUp()">
+  <ion-list>
+  <ion-item>
+  <ion-label position="stacked">Email</ion-label>
+  <ion-input autocomplete="off" [(ngModel)]="user.email" name="email" type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="stacked">Usuario</ion-label>
+  <ion-input autocomplete="off" [(ngModel)]="user.user" name="user" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="stacked">Password</ion-label>
+  <ion-input autocomplete="off" [(ngModel)]="user.password" name="password" type="password"></ion-input>
+  </ion-item>
+  <ion-item lines='none'>
+  Ya tienes una cuenta? <a routerLink='/login'> Inicia Sesion</a>
+  </ion-item>
+  </ion-list>
+  <ion-button expand="block" type="submit" share="round" color="success">Registrar</ion-button>
+  </form>
+  </ion-content>
